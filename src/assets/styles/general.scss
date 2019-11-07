@@ -1,0 +1,32 @@
+// UTILS
+body {
+    font-family: 'Nunito';
+    background-color: #f3f3f3;
+}
+.data-loading {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    z-index: 99999;
+
+    .loader-img {
+        display: block;
+        width: 150px;
+        height: 150px;
+    }
+}
+.hide {
+    display: none;
+}
+
+.container-card {
+    color: #30313c;
+    font-family: 'Nunito', 'sans-serif';
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: initial;
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: .375rem;
+    min-height: 75vh;
+}
