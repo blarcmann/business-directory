@@ -18,12 +18,13 @@ class BusinessDetails extends React.Component {
 
     deleteBusiness = (id) => {
         console.log('inside the componente', id);
-        for(let i = 0; i < this.state.businesses.length; i++) {
+        let bizList = this.state.businesses;
+        for(let i = 0; i < bizList.length; i++) {
             console.log(i, 'ihigh');
-            if((i._id + 1) === id) {
+            if(1 === id) {
             console.log(i, 'a macth');
-                this.state.businesses.splice(i, 1);
-                localStorage.setItem("businessList", JSON.stringify(this.state.businesses));
+                bizList.splice(i, 1);
+                localStorage.setItem("businessList", JSON.stringify(this.state.bizList));
                 this.props.history.go(-1);
             }
         }
