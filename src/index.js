@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import Dashboard from './views/Dashboard.jsx';
 import Businesses from './views/Businesses.jsx';
+import BusinessDetails from './views/BusinessDetails.jsx';
 
 ReactDOM.render(
       <BrowserRouter>
@@ -13,6 +14,7 @@ ReactDOM.render(
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/businesses" component={Businesses} />
+        <Route path="/business-details/:id" component={BusinessDetails} />
           <Redirect from="/" to="/login"/>
         </Switch>
       </BrowserRouter>,

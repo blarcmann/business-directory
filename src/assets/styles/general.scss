@@ -17,6 +17,29 @@ body {
     }
 }
 
+.actions {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem auto;
+    button.action {
+        border: none;
+        box-shadow: 0px 2px 3px #d4d4d5;
+        margin: 1rem auto;
+        color: #fff;
+        padding: .3rem;
+        height: 2.4rem;
+        width: 10.5rem;
+        font-size: .75rem;
+        &.edit {
+            background-color: #28ad07;
+        }
+        &.delete {
+            background-color: crimson;
+        }
+    }
+}
+
 .hide {
     display: none;
 }
@@ -27,6 +50,102 @@ body {
 }
 
 // CONTAINERS
+
+.profile-data {
+    font-family: 'Nunito';
+  
+    .biz-title {
+      color: rgba(32, 38, 55, 0.53);
+      font-weight: bold;
+    }
+  
+    .biz-underline {
+      width: 75px;
+      height: 0.3rem;
+      background-color: #36DA33;
+      border-radius: 0.875rem;
+    }
+  
+    .profile-card {
+      padding: 1.5rem;
+      display: block;
+      box-shadow: 0px 2.0879px 13.0879px rgba(0, 0, 0, 0.05);
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      color: #626369;
+      margin: 0 auto;
+  
+      @media(min-width: 768px) {
+        padding: 1.75rem;
+        display: flex;
+        max-width: 700px;
+      }
+  
+      .profile {
+        margin-right: 2rem;
+  
+        @media(max-width: 767px) {
+          margin: 1.75rem auto;
+        }
+  
+        img {
+          display: block;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          margin: 0.25rem auto;
+        }
+  
+        .name,
+        .address, .description {
+          font-weight: 600;
+          text-align: center;
+          font-size: 0.875rem;
+        }
+
+        .name {
+            text-transform: uppercase;
+        }
+  
+        .address {
+          font-size: 0.65rem;
+        }
+        
+        .description {
+            font-weight: 400;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 0.75rem;
+        }
+      }
+  
+      .details {
+        margin: auto;
+  
+        @media(max-width: 767px) {
+          margin-top: 3rem;
+        }
+  
+        .each-details {
+          display: flex;
+          justify-content: flex-start;
+          margin-bottom: 0.75rem;
+  
+          img {
+            display: block;
+            width: 1.125rem;
+            height: 1.125rem;
+            margin-right: 0.5rem;
+          }
+  
+          span {
+            font-size: 0.8rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
 
 .contents-cover {
     min-height: 81vh;
@@ -71,7 +190,8 @@ body {
         color: #fff;
         background-color: #24b300;
         border: none;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 0.75rem;
         padding: 0 0.875rem;
         height: 2.125rem;
         border-radius: 0.4rem;

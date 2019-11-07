@@ -9,7 +9,8 @@ const businessList = [
         phone: '09098363822',
         phone2: '07033673272',
         address: '22, oolashopla drive, shomolu berger, Ikorodu, Lagos.',
-        views: '23232'
+        views: '23232',
+        _id: '1'
     },
     {
         name: 'Enterprise A',
@@ -21,6 +22,7 @@ const businessList = [
         phone2: '07033673272',
         address: '22, oolashopla drive, shomolu berger, Ikorodu, Lagos.',
         views: '90',
+        _id: '2'
     },
     {
         name: 'Enterprise A',
@@ -31,7 +33,8 @@ const businessList = [
         phone: '09098363822',
         phone2: '07033673272',
         address: '22, oolashopla drive, shomolu berger, Ikorodu, Lagos.',
-        views: '23232'
+        views: '23232',
+        _id: '3'
     },
     {
         name: 'Enterprise A',
@@ -42,7 +45,8 @@ const businessList = [
         phone: '09098363822',
         phone2: '07033673272',
         address: '22, oolashopla drive, shomolu berger, Ikorodu, Lagos.',
-        views: '23232'
+        views: '23232',
+        _id: '4'
     },
     {
         name: 'Enterprise A',
@@ -52,7 +56,8 @@ const businessList = [
         phone: '09098363822',
         phone2: '07033673272',
         address: '22, oolashopla drive, shomolu berger, Ikorodu, Lagos.',
-        views: '23232'
+        views: '23232',
+        _id: '5'
     }
 ]
 
