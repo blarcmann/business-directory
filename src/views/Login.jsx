@@ -46,8 +46,8 @@ class Login extends Component {
                                 </div>
                             </div>
                         </form>
-                        <div to="forgot-password-init" className="follow-up mt-3 mb-3 text-center">
-                            <Link to="forgot-password-init">Continue as a visitor</Link>
+                        <div className="follow-up mt-3 mb-3 text-center">
+                            <Link to="/dashboard">Continue as a visitor</Link>
                         </div>
                     </div>
                 </div>
