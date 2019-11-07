@@ -5,12 +5,14 @@ import Login from './views/Login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import Dashboard from './views/Dashboard.jsx';
+import Businesses from './views/Businesses.jsx';
 
 ReactDOM.render(
       <BrowserRouter>
         <Switch>
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/businesses" component={Businesses} />
           <Redirect from="/" to="/login"/>
         </Switch>
       </BrowserRouter>,

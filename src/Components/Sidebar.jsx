@@ -18,11 +18,11 @@ class Sidebar extends React.Component {
                         B-DIRECT
                     </div>
                     <div className="menu-itemss">
-                        <Link to="all-businesses">
+                        <Link to="businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
                             All businesses
                         </Link>
-                        <Link to="all-businesses">
+                        <Link to="businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
                             All Categories
                         </Link>

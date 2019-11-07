@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
                                 <Sidebar />
                             </div>
                         </div>
-                        <div className="col-xl-10">
+                        <div className="col-xl-10 padding-0">
                             <div className="main-container">
                                 <div className="header">
                                     <Header />
@@ -106,13 +106,13 @@ class Dashboard extends React.Component {
                                                 </div>
                                             </div>
                                             <div className="text-center mt-5 h2">
-                                                Other stats
+                                                Other stats...
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="row">
+                            <div className="row ml-0">
                                 <Footer />
                             </div>
                         </div>
