@@ -14,6 +14,14 @@ class Login extends Component {
         }
     }
 
+    login = () => {
+        if(this.state.email === 'admin@admin.com' && this.state.password === 'admin') {
+            localStorage.setItem('grantedAccess', true);
+        } else {
+            localStorage.setItem('grantedAccess', false);
+        }
+    }
+
     render() {
         return (
             <div className="cover">

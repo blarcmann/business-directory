@@ -18,17 +18,17 @@ class Sidebar extends React.Component {
                         B-DIRECT
                     </div>
                     <div className="menu-itemss">
-                        <Link to="businesses">
-                            <img src={require('../assets/images/icons/reports.svg')} alt="" />
-                            All businesses
+                    <Link to="/dashboard">
+                            <img src={require('../assets/images/icons/dashboard.svg')} alt="" />
+                            Dashboard
                         </Link>
-                        <Link to="businesses">
+                        <Link to="/businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
-                            All Categories
+                            Businesses
                         </Link>
-                        <Link to="all-businesses">
+                        <Link to="/businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
-                            All businesses
+                            Categories
                         </Link>
                         <Link to="all-businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />

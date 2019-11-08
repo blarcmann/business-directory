@@ -6,6 +6,7 @@ import Footer from "../Components/Footer";
 import Sidebar from "../Components/Sidebar.jsx";
 import '../assets/styles/general.scss';
 
+
 export class Businesses extends Component {
     constructor(props) {
         super(props);
@@ -15,14 +16,24 @@ export class Businesses extends Component {
     }
 
     componentDidMount() {
-        localStorage.setItem("businessList", JSON.stringify(businessList));
+        const businesses = JSON.parse(localStorage.getItem('businessList'));
+        const categories = JSON.parse(localStorage.getItem('categoriesList'));
+        if (businesses !== null) {
+            console.log('biznes already loaded') 
+        } else {
+            localStorage.setItem("businessList", JSON.stringify(businessList));
+        }
+        if (categories !== null) {
+            console.log('catz already loaded') 
+            } else {
+                const categories = ['Software developemt', 'Business analyst', 'Banking and finance'];
+                localStorage.setItem("categoriesList", JSON.stringify(categories));
+        }
     }
-
-
 
     render() {
         const allBusinesses = [];
-        let bizList = businessList;
+        let bizList = JSON.parse(localStorage.getItem('businessList'));
         for (const [index, item] of bizList.entries()) {
             allBusinesses.push(
                 <tr key={index} className="each-row">
@@ -60,7 +71,8 @@ export class Businesses extends Component {
                                                 <img src={require("../assets/images/icons/spinner.svg")} className='loader-img' alt="+" />
                                             </div>
                                             <div className="table-menu mt-2 mb-2">
-                                                <button className="button button-primary add-new" onClick={this.toAddNew}>Add new business </button>
+                                                <button className="button button-primary add-new" onClick={this.toAddNew}>
+                                                <Link to='/edit-business'>Add new business</Link> </button>
                                                 <div className="search-form">
                                                     <form className="form-cover">
                                                         <input type="text" name="searchQuery" placeholder="Search" id="searchQuery"

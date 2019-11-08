@@ -61,4 +61,6 @@ const businessList = [
     }
 ]
 
+// const categories = ['Software developemt', 'Business analyst', 'Banking and finance'];
+
 export default businessList;

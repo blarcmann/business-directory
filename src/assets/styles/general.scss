@@ -16,28 +16,28 @@ body {
         height: 150px;
     }
 }
+button.action {
+    border: none;
+    box-shadow: 0px 2px 3px #d4d4d5;
+    margin: 1rem auto;
+    color: #fff;
+    padding: .3rem;
+    height: 2.4rem;
+    width: 10.5rem;
+    font-size: .75rem;
+    &.edit {
+        background-color: #28ad07;
+    }
+    &.delete {
+        background-color: crimson;
+    }
+}
 
 .actions {
     display: flex;
     justify-content: center;
     width: 80%;
     margin: 2rem auto;
-    button.action {
-        border: none;
-        box-shadow: 0px 2px 3px #d4d4d5;
-        margin: 1rem auto;
-        color: #fff;
-        padding: .3rem;
-        height: 2.4rem;
-        width: 10.5rem;
-        font-size: .75rem;
-        &.edit {
-            background-color: #28ad07;
-        }
-        &.delete {
-            background-color: crimson;
-        }
-    }
 }
 
 .hide {
@@ -74,7 +74,16 @@ body {
       margin-top: 2rem;
       color: #626369;
       margin: 0 auto;
-  
+        .images-flex {
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                width: 80px;
+                height: 80px;
+                display: block;
+                margin: 0.5rem;
+            }
+        }
       @media(min-width: 768px) {
         padding: 1.75rem;
         display: flex;
@@ -187,6 +196,10 @@ body {
     flex-wrap: wrap;
     font-family: 'Nunito';
     button.add-new {
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
         color: #fff;
         background-color: #24b300;
         border: none;
@@ -351,6 +364,37 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+form {
+    .text-input {
+        width: 90%;
+        margin: auto;
+        @media(min-width: 1200px) {
+            width: 40%;
+        }
+        input, textarea, select {
+            width: 100%;
+            border: 1px solid #1B1B31;
+            height: 2.5rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            outline: none;
+            padding-left: 0.5rem;;
+            background-color: #FFF;
+            &:active {
+                outline: none !important;
+            }
+        }
+        textarea {
+            height: 5rem;
+        }
+        label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #333;
         }
     }
 }

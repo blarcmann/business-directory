@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React from "react";
 import Header from "../Components/Header.jsx";
 import "../assets/styles/home.scss";
@@ -30,22 +31,20 @@ class BusinessDetails extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const businessId = this.props.match.params.id;
         if (this.props.match.params.id) {
             this.setState({
                 businessId: businessId
             })
         }
-        var businesses = localStorage.getItem("businessList");
-        console.log(businesses, 'before parse');
-        const parsedList = JSON.parse(businesses);
-        this.setState({
-            businesses: parsedList
-        })
-        // let businesses = businessList;
+        const parsedList = JSON.parse(localStorage.getItem('businessList'));
+        // this.setState({
+        //     businesses: parsedList
+        // })
         parsedList.forEach(business => {
-            if(business._id === businessId) {
+            console.log('loop start')
+            if(business._id == businessId) {
                 console.log('found business', business);
                 this.setState({
                     businessDetails: business
@@ -55,6 +54,12 @@ class BusinessDetails extends React.Component {
     }
 
     render() {
+        let bizImg = [];
+        for(let i = 0; i < 8; i++) {
+            bizImg.push(
+                <img src={require("../assets/images/icons/categorry.svg")} alt="" />
+            )
+        }
         return (
             <>
                 <div className="container-fluid">
@@ -155,6 +160,11 @@ class BusinessDetails extends React.Component {
                                                         />
                                                         <span>{this.state.businessDetails.category}</span>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div className="profile-card mt-5">
+                                                <div className="images-flex">
+                                                   {bizImg}
                                                 </div>
                                             </div>
                                             <div className="actions">
