@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
                         <div className="col-xl-10 padding-0">
                             <div className="main-container">
                                 <div className="header">
-                                    <Header />
+                                    <Header header="Dashboard"/>
                                 </div>
                                 <div className="contents-cover p-5">
                                     <div className="main-card">

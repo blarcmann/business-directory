@@ -17,16 +17,19 @@ export class EditCategories extends Component {
     }
 
     createListing = () => {
+        const access = localStorage.getItem('grantedAccess');
+        if(this.state.category === '') {
+            return globals.createToast('Form not correctly filled', 3500, 'top');
+        }
+        if(access != true) {
+            this.setState({
+                loading: false
+            });
+            return globals.createToast('You\'re not allowed to create this category', 3500, 'top');
+        }
         this.setState({
             loading: true
         })
-        const access = localStorage.getItem('grantedAccess');
-        if(access != true) {
-            return globals.createToast('You\'re not allowed to this create listing', 3500, 'bottom');
-        }
-        if(this.state.category === '') {
-            return globals.createToast('Form not correctly filled', 3500, 'bottom');
-        }
         const storeCaat = JSON.parse(localStorage.getItem('categoriesList'));
         let topushCat = [];
         storeCaat.forEach(caat => {
@@ -35,7 +38,7 @@ export class EditCategories extends Component {
         const cat =  this.state.category;
         topushCat.push(cat);
         localStorage.setItem("categoriesList", JSON.stringify(topushCat));
-        globals.createToast('Success', 1500, 'bottom');
+        globals.createToast('Success', 1500, 'top');
         this.setState({
             loading: false
         });
@@ -65,7 +68,7 @@ export class EditCategories extends Component {
                         <div className="col-xl-10 padding-0">
                             <div className="main-container">
                                 <div className="header">
-                                    <Header />
+                                    <Header header="Create new category"/>
                                 </div>
                                 <div className="contents-cover p-5">
                                 <div className="container-card p-4">
@@ -76,7 +79,7 @@ export class EditCategories extends Component {
                                 <form>
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <div className="text-input">
+                                                    <div className="text-input mt-5">
                                                         <label htmlFor="name">Category</label>
                                                         <input type="text" name="name" id="name"
                                                             onChange={e => this.setState({ category: e.target.value })}

@@ -15,7 +15,7 @@ class Sidebar extends React.Component {
                 <div className="side-bar-cover">
                     <div className="top-logo">
                         {/* <img src={require("../assets/images/icons/customers.png")} alt="" /> */}
-                        B-DIRECT
+                        BIZ-DICTRY
                     </div>
                     <div className="menu-itemss">
                     <Link to="/dashboard">
@@ -26,14 +26,14 @@ class Sidebar extends React.Component {
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
                             Businesses
                         </Link>
-                        <Link to="/businesses">
+                        {/* <Link to="/businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
                             Categories
                         </Link>
                         <Link to="all-businesses">
                             <img src={require('../assets/images/icons/reports.svg')} alt="" />
                             All businesses
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </>

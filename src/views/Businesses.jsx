@@ -31,6 +31,13 @@ export class Businesses extends Component {
         }
     }
 
+    toAddNew = () => {
+        this.props.history.push('/edit-business');
+    }
+    toAddCat = () => {
+        this.props.history.push('/edit-category');
+    }
+
     render() {
         const allBusinesses = [];
         let bizList = JSON.parse(localStorage.getItem('businessList'));
@@ -62,7 +69,7 @@ export class Businesses extends Component {
                         <div className="col-xl-10 padding-0">
                             <div className="main-container">
                                 <div className="header">
-                                    <Header />
+                                    <Header header="All businesses"/>
                                 </div>
                                 <div className="contents-cover p-5">
                                     <div className="row">
@@ -71,8 +78,8 @@ export class Businesses extends Component {
                                                 <img src={require("../assets/images/icons/spinner.svg")} className='loader-img' alt="+" />
                                             </div>
                                             <div className="table-menu mt-2 mb-2">
-                                                <button className="button button-primary add-new" onClick={this.toAddNew}>
-                                                <Link to='/edit-business'>Add new business</Link> </button>
+                                                <button className="button button-primary add-new mr-3" onClick={this.toAddNew}>Add new business</button>
+                                                <button className="button button-primary add-new" onClick={this.toAddCat}>Add new category</button>
                                                 <div className="search-form">
                                                     <form className="form-cover">
                                                         <input type="text" name="searchQuery" placeholder="Search" id="searchQuery"

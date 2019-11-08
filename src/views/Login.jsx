@@ -15,10 +15,12 @@ class Login extends Component {
     }
 
     login = () => {
-        if(this.state.email === 'admin@admin.com' && this.state.password === 'admin') {
+        if(this.state.email === 'admin@admin.com' && this.state.password === 'password') {
             localStorage.setItem('grantedAccess', true);
+            this.props.history.push('/dashboard');
         } else {
             localStorage.setItem('grantedAccess', false);
+            this.props.history.push('/businesses');
         }
     }
 
@@ -49,11 +51,12 @@ class Login extends Component {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-lg-12 mt-4">
-                                    <button className="form-submit" onClick={this.login}>Login <div className={this.state.loading ? "loading" : "little-load"}></div></button>
-                                </div>
                             </div>
                         </form>
+
+                        <div className="col-lg-12 mt-4">
+                            <button className="form-submit" onClick={this.login}>Login <div className={this.state.loading ? "loading" : "little-load"}></div></button>
+                        </div>
                         <div className="follow-up mt-3 mb-3 text-center">
                             <Link to="/dashboard">Continue as a visitor</Link>
                         </div>

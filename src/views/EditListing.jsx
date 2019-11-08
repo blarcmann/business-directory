@@ -24,16 +24,19 @@ export class EditListing extends Component {
     }
 
     createListing = () => {
+        const access = localStorage.getItem('grantedAccess');
+        if(access != true) {
+            this.setState({
+                loading: false
+            });
+            return globals.createToast('You\'re not allowed to this create listing', 3500, 'top');
+        }
+        if(this.state.name === '' || this.state.website === '' || this.state.category === '' || this.state.email === '' || this.state.phone === '' || this.state.address === '') {
+            return globals.createToast('Form not correctly filled', 3500, 'top');
+        }
         this.setState({
             loading: true
         })
-        const access = localStorage.getItem('grantedAccess');
-        if(access != true) {
-            return globals.createToast('You\'re not allowed to this create listing', 3500, 'bottom');
-        }
-        if(this.state.name === '' || this.state.website === '' || this.state.category === '' || this.state.email === '' || this.state.phone === '' || this.state.address === '') {
-            return globals.createToast('Form not correctly filled', 3500, 'bottom');
-        }
         const storedBiz = JSON.parse(localStorage.getItem('businessList'));
         console.log(storedBiz, 'to store in');
         const bizId = storedBiz.length + 1;
@@ -55,7 +58,7 @@ export class EditListing extends Component {
         });
         topushBiz.push(biznesDetails);
         console.log('newish', topushBiz);
-        globals.createToast('Success', 1500, 'bottom-right');
+        globals.createToast('Success', 1500, 'top');
         this.setState({
             loading: false
         })
@@ -88,7 +91,7 @@ export class EditListing extends Component {
                         <div className="col-xl-10 padding-0">
                             <div className="main-container">
                                 <div className="header">
-                                    <Header />
+                                    <Header header="Create listing"/>
                                 </div>
                                 <div className="contents-cover p-5">
                                 <div className="container-card p-4">
