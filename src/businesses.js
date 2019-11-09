@@ -1,9 +1,8 @@
-
 const businessList = [
     {
         name: 'Enterprise A',
         description: 'a business/commercial/economic enterprise What we always look for in a future business partner is a commitment to the business enterprise and its success.',
-        category: 'Software developemt',
+        category: ['Software development'],
         website: 'https://wwww.google.com',
         email: 'sampleemail@bizlist.ng',
         phone: '09098363822',
@@ -15,7 +14,7 @@ const businessList = [
     {
         name: 'Enterprise A',
         description: 'a business/commercial/economic enterprise What we always look for in a future business partner is a commitment to the business enterprise and its success.',
-        category: 'Business analyst',
+        category: ['Business analyst'],
         website: 'https://wwww.google.com',
         email: 'sampleemail@bizlist.ng',
         phone: '',
@@ -27,7 +26,7 @@ const businessList = [
     {
         name: 'Enterprise A',
         description: 'a business/commercial/economic enterprise What we always look for in a future business partner is a commitment to the business enterprise and its success.',
-        category: 'Software developemt',
+        category: ['Software development'],
         website: 'https://wwww.google.com',
         email: 'sampleemail@bizlist.ng',
         phone: '09098363822',
@@ -39,7 +38,7 @@ const businessList = [
     {
         name: 'Enterprise A',
         description: 'a business/commercial/economic enterprise What we always look for in a future business partner is a commitment to the business enterprise and its success.',
-        category: 'Software developemt',
+        category: ['Software development'],
         website: 'https://wwww.google.com',
         email: 'sampleemail@bizlist.ng',
         phone: '09098363822',
@@ -51,7 +50,7 @@ const businessList = [
     {
         name: 'Enterprise A',
         description: 'a business/commercial/economic enterprise What we always look for in a future business partner is a commitment to the business enterprise and its success.',
-        category: 'Software developemt',
+        category: ['Software development'],
         website: 'https://wwww.google.com',
         phone: '09098363822',
         phone2: '07033673272',
@@ -60,7 +59,5 @@ const businessList = [
         _id: '5'
     }
 ]
-
-// const categories = ['Software developemt', 'Business analyst', 'Banking and finance'];
 
 export default businessList;

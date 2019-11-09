@@ -10,9 +10,7 @@ import '../assets/styles/general.scss';
 export class Businesses extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            searchQuery: ''
-        }
+        this.state = {}
     }
 
     componentWillMount() {

@@ -55,7 +55,7 @@ class Login extends Component {
                         </form>
 
                         <div className="col-lg-12 mt-4">
-                            <button className="form-submit" onClick={this.login}>Login <div className={this.state.loading ? "loading" : "little-load"}></div></button>
+                            <button className="form-submit" onClick={this.login}>Login</button>
                         </div>
                         <div className="follow-up mt-3 mb-3 text-center">
                             <Link to="/dashboard">Continue as a visitor</Link>
